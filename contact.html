@@ -1,155 +1,174 @@
-<!DOCTYPE html> 
- <html> 
-   <head> 
-     <title>Contact</title> 
-     <style>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact</title>
+    <style>
       body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
+        margin: 0;
+        padding: 0;
+        position: center;
+      }
 
-#video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-}
-  
-       .logo { 
-         width: 50px; /* ukuran sesuai kebutuhan Anda */ 
-          height: 50px; /* ukuran sesuai kebutuhan Anda */ 
-          object-fit: contain; 
-       } 
-  
-       .contact { 
-        width: 400px; 
-        background-color: #000; 
+      #video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      .logo {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+      }
+
+      .contact-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .contact-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .contact {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        background-color: #000;
         opacity: 0.8;
-        border-radius: 10px; 
-        padding: 20px; 
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-       } 
-  
-       h1 { 
-         font-size: 24px; 
-         text-align: center; 
-         margin-bottom: 20px; 
-         color: #333; 
-         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
-       } 
-  
-       p { 
-         margin-bottom: 10px; 
-         color: #555; 
-         line-height: 1.5; 
-       } 
-  
-       strong { 
-         font-weight: bold; 
-         color: #333; 
-       } 
-  
-       .contact-link { 
-         display: inline-block; 
-         color: #fff; 
-         background-color: #333; 
-         padding: 8px 16px; 
-         border-radius: 5px; 
-         text-decoration: none; 
-         transition: background-color 0.3s ease; 
-       } 
-  
-       .contact-link:hover { 
-         background-color: #fff; 
-       } 
-  
-      .email-btn { 
-        display: block; 
-        font-size: 20px; 
-        margin: 20px auto; 
-        padding: 10px 20px; 
-        width: 200px; 
-        color: #000; 
-        text-align: center; 
-        text-decoration: none; 
-        background-color: gray; 
-        border-radius: 30px; 
-        position: relative; 
-        overflow: hidden; 
-       } 
-  
-       .email-btn:before { 
-        content: ""; 
-        position: absolute; 
-        top: -100%; 
-        left: -100%; 
-        width: 100%; 
-        height: 100%; 
-        background-color: rgba(255, 255, 255, 0.5); 
-        transform: translate(-50%, -50%) rotate(-45deg); 
-        z-index: 1; 
-        transition: opacity 0.3s ease; 
-      } 
-  
-      .email-btn:after { 
-        content: ""; 
-        position: absolute; 
-        top: 50%; 
-        left: 50%; 
-        width: 150%; 
-        height: 150%; 
-        background-color: rgba(255, 255, 255, 0.3); 
-        transform: translate(-50%, -50%) rotate(45deg); 
-        z-index: 1; 
-        transition: opacity 0.3s ease; 
-      } 
-  
-       .email-btn:hover::before { 
-        opacity: 0; 
-      } 
-  
-      .email-btn:hover::after { 
-        opacity: 0; 
-      } 
-  
-      .animated-email { 
-        /* Gaya animasi tombol email */ 
-       /* Misalnya, Anda dapat menggunakan transition untuk memberikan efek fade-in */ 
-        transition: opacity 0.3s ease; 
-      } 
-  
-      .animated-email:hover { 
-        opacity: 0.5; 
-      } 
-   </style> 
-   </head> 
-   <body>
-     <video id="video-background" autoplay loop>
-       <source src="video.mp4" type="video/mp4">
-       
-       your browser does not support the video tag.
-     </video>
-     <div class="contact"> 
-     <img src="logo.png" alt="Logo" class="logo"> 
-       <h1>Contact</h1> 
-       <p>Jika Anda membutuhkan bantuan, silakan hubungi kami:</p> 
-       <p><strong>Email:</strong> rachrisgamer@gmail.com</p> 
-       <p><strong>Phone:</strong> 085965981742</p> 
-       <a class="contact-link" href="https://www.instagram.com/initiaann_0705">Kunjungi Instagram Kami</a> 
-       <a class="email-btn" href="mailto:dreamliner.contact@gmail.com">Kirim Email</a> 
-     </div> 
-     <script> 
-      var emailBtn = document.getElementById('email-btn'); 
-  
-      emailBtn.addEventListener('click', function() { 
-      emailBtn.classList.add('animated-email'); 
-      }); 
-     </script> 
-   </body> 
- </html>
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      p {
+        margin-bottom: 10px;
+        color: #555;
+        line-height: 1.5;
+      }
+
+      strong {
+        font-weight: bold;
+        color: #333;
+      }
+
+      .contact-link {
+        display: inline-block;
+        color: #fff;
+        background-color: #333;
+        padding: 8px 16px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .contact-link:hover {
+        background-color: #fff;
+      }
+
+      .email-btn {
+        display: block;
+        font-size: 20px;
+        margin: 20px auto;
+        padding: 10px 20px;
+        width: 200px;
+        color: #000;
+        text-align: center;
+        text-decoration: none;
+        background-color: gray;
+        border-radius: 30px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .email-btn:before {
+        content: "";
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.5);
+        transform: translate(-50%, -50%) rotate(-45deg);
+        z-index: 1;
+        transition: opacity 0.3s ease;
+      }
+
+      .email-btn:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 150%;
+        height: 150%;
+        background-color: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%) rotate(45deg);
+        z-index: 1;
+        transition: opacity 0.3s ease;
+      }
+
+      .email-btn:hover::before {
+        opacity: 0;
+      }
+
+      .email-btn:hover::after {
+        opacity: 0;
+      }
+
+      .animated-email {
+        transition: opacity 0.3s ease;
+      }
+
+      .animated-email:hover {
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact-container">
+      <video id="video-background" autoplay loop>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="contact">
+        <img src="logo-light.png" alt="" class="logo">
+        <h1>Contact</h1>
+        <p>Jika Anda membutuhkan bantuan, silakan hubungi kami:</p>
+        <p><strong>Email:</strong> rachrisgamer@gmail.com</p>
+        <p><strong>Whatsapp:</strong> +6285965981742</p>
+        <p><strong>Phone:</strong> +6285965981742</p>
+        <a href="mailto: dreamliner.contact@gmail.com" class="email-btn">Email Us</a>
+        <p class="animated-email">Klik tombol di atas untuk mengirim email kepada kami.</p>
+        <p>Anda juga dapat menghubungi kami melalui <a href="https://wa.me/6285965981742" target="_blank" class="contact-link">Whatsapp</a> atau melalui telepon di <a href="tel:+6285965981742" class="contact-link">+6285965981742</a>.</p>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const video = document.getElementById("video-background");
+        video.muted = false;
+      });
+    </script>
+  </body>
+  b</html>
