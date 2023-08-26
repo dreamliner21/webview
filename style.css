@@ -1,0 +1,177 @@
+body {
+  font-family: Arial, sans-serif; 
+             background-repeat: no-repeat; 
+             background-size: cover; 
+             background-position: center; 
+             weight: 100vw; 
+             height: 100vh; 
+             color: #ffffff; /* Misalnya, warna putih */ 
+         } 
+  
+         @media (prefers-color-scheme: dark) { 
+     body { 
+       background-image: url('dark-background.png'); 
+         color: #ffffff; /* Misalnya, warna putih untuk tema gelap */ 
+     } 
+   } 
+  
+   @media (prefers-color-scheme: light) { 
+     body { 
+       background-image: url('background-2.png'); 
+         color: #000000; /* Misalnya, warna hitam untuk tema terang */ 
+     } 
+   }
+   header {
+   position: fixed;
+   top: 0;
+   right: 0;
+   background-color: transparent;
+   padding: 10px;
+   width: 100%;
+   }
+   
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.logo a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media(max-width: 768px) {
+  .menu ul {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+  }
+}
+
+.logo-container {
+         	position: absolute;
+             top: 10px;
+             left: 10px;
+             display: flex;
+             align-item: center;
+          }
+          
+          .logo {
+          	width: 40px;
+              height: 40;
+              object-fit: contain;
+              filter: invert(var(--theme-color));
+          }
+          
+          @font-face {
+          	font-family: "Graffiti Classic";
+              src: url("fonts/Graffiti Classic.otf")
+              format("opentype");
+          }
+          
+          .logo-text {
+             margin-left: 10px;
+             font-size: 16px;
+             font-family: "Graffiti Classic", sans-serif;
+          }
+          
+/* styles for the content sections */ 
+     .section { 
+       padding: 50px; 
+       text-align: center; 
+     } 
+  
+         h1 { 
+             text-align: center; 
+             body-display: flex; 
+             align-items: center; 
+         } 
+  
+         .project { 
+             width: 30%;
+             margin-bottom: 20px; 
+             padding-top: 100px;
+         } 
+  
+         .project h2.title a { 
+     color: var(--font-color); /* Use CSS Variable for font color */ 
+         } 
+  
+         .project img { 
+             width: 100%; 
+             max-width: 200px; 
+             height: auto; 
+             display: block; 
+             margin: 0 auto;
+             opacity: 0.7;
+         } 
+  
+         .project .title { 
+             text-align: center; 
+             margin-left: 10px;
+         } 
+  
+         .project .description { 
+             text-align: justify; 
+             margin-left: 10px; 
+         } 
+         footer { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            position: fixed; 
+            bottom: 0; 
+            left: 0; 
+            right: 0; 
+            height: 100px; /* Ubah sesuai dengan tinggi ikon-ikon media sosial yang Anda gunakan */ 
+            /* background: #f9f9f9; */ 
+        } 
+  
+        #media-sosial { 
+   display: flex; 
+   justify-content: center; 
+   align-items: center; 
+   gap: 10px; /* Jarak antara ikon-ikon media sosial */ 
+ } 
+  
+ #media-sosial a img { 
+   width: 30px; 
+   height: 30px; 
+ } 
+  
+   .footer { 
+     animation: slide-in 10s forwards; 
+   } 
+  
+   @keyframes slide-in { 
+     0% { 
+       transform: translateX(-100%); 
+     } 
+     100% { 
+       transform: translateX(0); 
+     } 
+   } 
